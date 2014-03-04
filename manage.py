@@ -15,6 +15,7 @@ manager.add_command("runserver", Server(
     host = '0.0.0.0')
 )
 
+#web: gunicorn -b 0.0.0.0:$PORT manage:app
 #manager.add_command("rungunicorn", Gunicorn(host='0.0.0.0', port=5000))
 
 if __name__ == "__main__":
