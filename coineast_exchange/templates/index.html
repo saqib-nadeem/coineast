@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+<div class="jumbotron"> 
+	
+	<div class="col-md-6 col-md-offset-3"> 
+
+	<div class="">
+                    <h3 class="white">CoinEast Bitcoin Exchange</h3>
+                    <p class="white"> CoinEast is an Pakistans first Bitcoin exchange that allows you to securely buy, sell
+                    	bitcoin currency </p>
+                    <span class="sub-title col-md-offset-1 white">Start Trading bitcoins today.
+                    <a href="{{ url_for('security.register') }}"  class="btn btn-lg btn-success col-md-offset-2 cta-button">Get Started</a>
+                    </span>
+     </div>
+</div>
+</div>
+
+<div class="container horizontal-line"></div>
+<section class="section-tout">
+ <div class="container">  
+   <div class="row">
+
+    <div class="col-lg-4 col-sm-6">
+      <h2><i class="icon icon-lock"></i> Bank Level Security.</h2>
+      <p>We take careful measures to ensure our website and customer bitcoin are as secure as possible. <a class="learn" href="/security">Learn More</a></p>
+    </div>
+    
+    <div class="col-lg-4 col-sm-6">
+      <h2><i class="icon icon-briefcase"></i> Offline Backups.</h2>
+      <p>Up to 97% of customer funds are stored offline in bank vaults to prevent theft or loss.</p>
+    </div>
+    
+    <div class="col-lg-4 col-sm-6">
+      <h2><i class="icon icon-drive"></i> Fully Encrypted.</h2>
+      <p>Wallets (and private keys) are stored using AES-256 encryption and the site runs entirely over SSL.</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="container horizontal-line"></div>
+
+<div class="index-details">
+   <div class="container">
+  <section class="index-more-buy-sell row-fluid">
+    <figure class="span8">
+      <img src="../static/img/home-buy-sell-screenshot.jpg">
+    </figure>
+    <div class="col-md-offset-8">
+    <div class="span4">
+      <h1>Buy &amp; Sell.</h1>
+      <p>Hook up your bank account to start buying and selling bitcoin in minutes. It’s that easy.</p>
+      <a class="learn" href="/buy-bitcoin">Learn More</a>
+    </div>
+</div>
+  </section>
+  
+  </div>
+</div>
+
+<div class="container horizontal-line"></div>
+
+<div class="container section-wrapper bottom-cta-wrapper">
+        <div class="row">
+            <div>
+                <span class="bottom-cta-text-wrapper">Get started in 30 seconds</span>
+                
+                <a href="{{ url_for('security.register') }}" class="btn btn-large btn-success cta-button">Get Started</a>
+                <span class="bottom-cta-text-wrapper">Questions? <a href="https://www.hipchat.com/ggkkpDG4E">Drop us an email</a></span>
+            </div>
+        </div>
+    </div>
+
+<div class="container horizontal-line"></div>
+{% endblock %}
+

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% from "security/_macros.html" import render_field_with_errors, render_field %}
+{% include "security/_messages.html" %}
+
+<div class="container"> 
+
+  <div class="row">
+    <h4 class="col-md-4"> Create Account</h4>
+
+</div>
+</br> 
+<div class="container horizontal-line"></div>
+    </br></br>
+
+<form action="{{ url_for_security('register') }}" method="POST" name="register_user_form">
+  {{ register_user_form.hidden_tag() }}
+
+  <div class="row"> 
+    <div class="col-md-3 formlabel">
+  {{ render_field_with_errors(register_user_form.first_name,class="form-control input-lg") }}
+    </div>
+   <div class="col-md-3 formlabel">
+  {{ render_field_with_errors(register_user_form.last_name,class="form-control input-lg") }} 
+  </div> 
+
+</div>
+</br>
+<div class="row"> 
+    <div class="col-md-3 formlabel">
+         {{ render_field_with_errors(register_user_form.password,class="form-control input-lg") }}</div>
+    <div class="col-md-3 formlabel">
+      {% if register_user_form.password_confirm %}
+          {{ render_field_with_errors(register_user_form.password_confirm,class="form-control input-lg") }}
+      {% endif %}
+    </div>
+</div>
+
+</br>
+
+<div class="row"> 
+    <div class="col-md-4 formlabel">
+   {{ render_field_with_errors(register_user_form.email,class="form-control input-lg") }}
+  </div>
+</div>
+ </br>
+  
+
+<div class="container horizontal-line"></div>
+</br>
+<div class="row">
+  <div class="col-md-3 formlabel">
+  <p> By continuing, I agree to CoinEast.
+  <a href="{{ url_for('user_agreement') }}"> user agreement</a>
+   </p>
+
+  </div>
+<div class="col-md-2">
+  {{ render_field(register_user_form.submit,class="btn btn-primary btn-lg btn-block") }}</div>
+</div>
+</form>
+	</div>
+	
+
+{% endblock %}
