@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 app.config.from_object('coineast_exchange.settings')
 
+
 import coineast_exchange.controllers
 import coineast_exchange.core
 import coineast_exchange.models

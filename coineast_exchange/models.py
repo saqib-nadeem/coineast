@@ -4,6 +4,7 @@ from flask.ext.security import UserMixin, RoleMixin
 from coineast_exchange import app
 from flask.ext.mongoengine import MongoEngine
 
+
 db = MongoEngine(app)
 
 class Role(db.Document, RoleMixin):

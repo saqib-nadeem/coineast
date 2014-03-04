@@ -15,12 +15,14 @@ price_usd = btc_price_in_usd()
 
 app.jinja_env.globals.update(btc_pkr_price=price_pk, btc_usd_price=price_usd)
 
+
 """
 # Create a user to test with
 @app.before_first_request
 def create_user():
     user_datastore.create_user(email='test@redbrick.com', password='password')
 """
+
 
 # This processor is added to all templates
 @security.context_processor

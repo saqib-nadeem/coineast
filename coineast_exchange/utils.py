@@ -7,6 +7,7 @@ from pymongo import Connection
 # MongoLab-Connection
 #----------------------------------------
 
+
 MONGODB_URI = 'mongodb://admin:admin@ds027749.mongolab.com:27749/project'
 client = pymongo.MongoClient(MONGODB_URI)
 db = client.get_default_database()

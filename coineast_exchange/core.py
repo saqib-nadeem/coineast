@@ -7,6 +7,7 @@ from flask.ext.security import Security, MongoEngineUserDatastore
 from coineast_exchange.models import User, Role
 from coineast_exchange.forms import ExtendedRegisterForm
 
+
 # Create database connection object
 db = MongoEngine(app)
 
