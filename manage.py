@@ -1,5 +1,16 @@
+import os
+from coineast_exchange import app
+
+def runserver():
+	port = int(os.environ.get('PORT', 5000))
+	app.run(host='0.0.0.0', port=port)
+
+if __name__ == '__main__':
+	runserver()
+
+
 # Set the path
-import os, sys
+'''import os, sys
 import Gunicorn
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
@@ -19,4 +30,4 @@ manager.add_command("runserver", Server(
 #manager.add_command("rungunicorn", Gunicorn(host='0.0.0.0', port=5000))
 
 if __name__ == "__main__":
-    manager.run()
+    manager.run()'''
